@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NabucoBank.BillPayment.Domain", "src\NabucoBank.BillPayment.Domain\NabucoBank.BillPayment.Domain.csproj", "{22DC563D-C306-4C4E-BF90-7326AF4BED4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NabucoBank.BillPayment.CrossCutting", "src\NabucoBank.BillPayment.CrossCutting\NabucoBank.BillPayment.CrossCutting.csproj", "{C95D2BBA-1D38-445B-B82F-0C86122C8D27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NabucoBank.BillPayment.Application", "src\NabucoBank.BillPayment.Application\NabucoBank.BillPayment.Application.csproj", "{E896D5A4-8018-4FDD-BFEE-682413AB78A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NabucoBank.BillPayment.Infrastructure", "src\NabucoBank.BillPayment.Repositories\NabucoBank.BillPayment.Infrastructure.csproj", "{5DD6C846-3B45-4FA3-9EB8-C7E5618AA329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NabucoBank.BillPayment.Api", "src\NabucoBank.BillPayment.Api\NabucoBank.BillPayment.Api.csproj", "{E3A5E66A-A167-494C-9D69-4EF33CFDD88D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22DC563D-C306-4C4E-BF90-7326AF4BED4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DC563D-C306-4C4E-BF90-7326AF4BED4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DC563D-C306-4C4E-BF90-7326AF4BED4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DC563D-C306-4C4E-BF90-7326AF4BED4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95D2BBA-1D38-445B-B82F-0C86122C8D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95D2BBA-1D38-445B-B82F-0C86122C8D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95D2BBA-1D38-445B-B82F-0C86122C8D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95D2BBA-1D38-445B-B82F-0C86122C8D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E896D5A4-8018-4FDD-BFEE-682413AB78A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E896D5A4-8018-4FDD-BFEE-682413AB78A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E896D5A4-8018-4FDD-BFEE-682413AB78A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E896D5A4-8018-4FDD-BFEE-682413AB78A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DD6C846-3B45-4FA3-9EB8-C7E5618AA329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD6C846-3B45-4FA3-9EB8-C7E5618AA329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD6C846-3B45-4FA3-9EB8-C7E5618AA329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD6C846-3B45-4FA3-9EB8-C7E5618AA329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A5E66A-A167-494C-9D69-4EF33CFDD88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A5E66A-A167-494C-9D69-4EF33CFDD88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A5E66A-A167-494C-9D69-4EF33CFDD88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A5E66A-A167-494C-9D69-4EF33CFDD88D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF1FBEF6-E4D4-4668-AC65-590D129A9FFF}
+	EndGlobalSection
+EndGlobal
