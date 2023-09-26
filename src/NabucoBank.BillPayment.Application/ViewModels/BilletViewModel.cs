@@ -1,10 +1,11 @@
-﻿namespace NabucoBank.BillPayment.Domain.Models
+﻿namespace NabucoBank.BillPayment.Application.ViewModels
 {
-    public class BilletModel : BaseModel
+    public class BilletViewModel
     {
         public string Cpf { get; set; }
         public string DigitableLine { get; set; }
         public decimal Amount { get; set; }
         public DateTime ExpiratedAt { get; set; }
+        public DateTime CreatedAt { get; set;}
     }
 }

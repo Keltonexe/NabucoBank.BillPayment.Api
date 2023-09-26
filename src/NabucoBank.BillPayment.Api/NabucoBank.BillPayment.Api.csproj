@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\NabucoBank.BillPayment.Application\NabucoBank.BillPayment.Application.csproj" />
   </ItemGroup>
 
 </Project>

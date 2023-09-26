@@ -5,4 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.151" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NabucoBank.BillPayment.Domain\NabucoBank.BillPayment.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace NabucoBank.BillPayment.Domain.Models
+﻿namespace NabucoBank.BillPayment.Application.Payloads
 {
-    public class BilletModel : BaseModel
+    public class BilletPayload
     {
         public string Cpf { get; set; }
         public string DigitableLine { get; set; }
