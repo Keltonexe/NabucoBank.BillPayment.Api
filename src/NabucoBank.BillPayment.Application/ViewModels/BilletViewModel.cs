@@ -1,4 +1,6 @@
-﻿namespace NabucoBank.BillPayment.Application.ViewModels
+﻿using NabucoBank.BillPayment.Application.DTOs.Responses;
+
+namespace NabucoBank.BillPayment.Application.ViewModels
 {
     public class BilletViewModel
     {
@@ -7,5 +9,6 @@
         public decimal Amount { get; set; }
         public DateTime ExpiratedAt { get; set; }
         public DateTime CreatedAt { get; set;}
+        public AccountResponseDto Account { get; set; }
     }
 }

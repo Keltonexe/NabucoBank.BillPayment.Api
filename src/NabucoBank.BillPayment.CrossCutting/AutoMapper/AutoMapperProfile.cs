@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using NabucoBank.BillPayment.Application.DTOs.Responses;
 using NabucoBank.BillPayment.Application.Payloads;
 using NabucoBank.BillPayment.Application.ViewModels;
 using NabucoBank.BillPayment.Domain.Models;
@@ -10,6 +11,7 @@ namespace NabucoBank.BillPayment.CrossCutting.AutoMapper
         public AutoMapperProfile()
         {
             CreateMap<BilletModel, BilletViewModel>().ForMember(dest => dest.CreatedAt, map => map.MapFrom(src => src.CreatedAt.ToString("dd/MM/yyyy"))).ReverseMap();
+            CreateMap<AccountResponseDto, BilletViewModel>().ReverseMap();
             
             CreateMap<BilletPayload, BilletModel>().ReverseMap();
         }

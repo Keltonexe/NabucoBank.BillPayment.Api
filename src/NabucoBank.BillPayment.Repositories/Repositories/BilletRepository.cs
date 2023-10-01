@@ -8,7 +8,7 @@ namespace NabucoBank.BillPayment.Infrastructure.Repositories
     public class BilletRepository : IBilletRepository
     {
         readonly IDbConnection _connection;
-        public BilletRepository(IBilletRepository billletRepository, IDbConnection connection)
+        public BilletRepository(IDbConnection connection)
         {
             _connection = connection;
         }
@@ -17,12 +17,16 @@ namespace NabucoBank.BillPayment.Infrastructure.Repositories
             _connection.Open();
             try
             {
-                string sql = "";
-                return await _connection.QueryAsync<BilletModel>(sql);
+                model.HashCode = Guid.NewGuid().ToString();
+                model.ExpiratedAt = DateTime.Now.AddMonths(1);
+                string sql = @"INSERT INTO billets (CPF, DIGITABLE_LINE, AMOUNT, DT_EXPIRATED, DT_CREATED, DT_UPDATED, DT_DELETED, HASH_CODE) 
+                               VALUES (@Cpf, @DigitableLine, @Amount, @ExpiratedAt, @CreatedAt, @UpdatedAt, @DeletedAt, @HashCode);
+                               SELECT * FROM billets WHERE ID = LAST_INSERT_ID();";
+                return await _connection.QuerySingleAsync<BilletModel>(sql, model);
             }
             finally
             {
-
+                _connection.Close();
             }
         }
 
@@ -36,7 +40,7 @@ namespace NabucoBank.BillPayment.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<BilletModel> GetBilletByIdAsync()
+        public Task<BilletModel> GetBilletByIdAsync(long id)
         {
             throw new NotImplementedException();
         }

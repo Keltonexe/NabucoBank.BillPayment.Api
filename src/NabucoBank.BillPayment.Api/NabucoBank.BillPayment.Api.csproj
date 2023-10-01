@@ -6,7 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NabucoBank.BillPayment.Application\NabucoBank.BillPayment.Application.csproj" />
+    <ProjectReference Include="..\NabucoBank.BillPayment.CrossCutting\NabucoBank.BillPayment.CrossCutting.csproj" />
+    <ProjectReference Include="..\NabucoBank.BillPayment.Repositories\NabucoBank.BillPayment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

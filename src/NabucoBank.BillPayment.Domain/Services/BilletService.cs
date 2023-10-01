@@ -1,33 +1,39 @@
 ﻿using NabucoBank.BillPayment.Domain.Interfaces;
+using NabucoBank.BillPayment.Domain.Interfaces.Repositories;
 using NabucoBank.BillPayment.Domain.Models;
 
 namespace NabucoBank.BillPayment.Domain.Services
 {
-    public class BilletService : IBilletRepository
+    public class BilletService : IBilletService
     {
-        public Task<BilletModel> CreateBilletAsync(BilletModel model)
+        readonly IBilletRepository _billetRepository;
+        public BilletService(IBilletRepository billetRepository)
         {
-            throw new NotImplementedException();
+            _billetRepository = billetRepository;
+        }
+        public async Task<BilletModel> CreateBilletAsync(BilletModel model)
+        {
+            return await _billetRepository.CreateBilletAsync(model);
         }
 
-        public Task<bool> DeleteBilletAsync(long id)
+        public async Task<bool> DeleteBilletAsync(long id)
         {
-            throw new NotImplementedException();
+            return await _billetRepository.DeleteBilletAsync(id);
         }
 
-        public Task<IEnumerable<BilletModel>> GetAllBilletsAsync()
+        public async Task<IEnumerable<BilletModel>> GetAllBilletsAsync()
         {
-            throw new NotImplementedException();
+            return await _billetRepository.GetAllBilletsAsync();
         }
 
-        public Task<BilletModel> GetBilletByIdAsync()
+        public async Task<BilletModel> GetBilletByIdAsync(long id)
         {
-            throw new NotImplementedException();
+            return await _billetRepository.GetBilletByIdAsync(id);
         }
 
-        public Task<bool> UpdateBilletAsync(BilletModel model, long id)
+        public async Task<bool> UpdateBilletAsync(BilletModel model, long id)
         {
-            throw new NotImplementedException();
+            return await _billetRepository.UpdateBilletAsync(model, id);
         }
     }
 }

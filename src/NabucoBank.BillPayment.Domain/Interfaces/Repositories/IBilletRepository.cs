@@ -5,7 +5,7 @@ namespace NabucoBank.BillPayment.Domain.Interfaces.Repositories
     public interface IBilletRepository
     {
         Task<IEnumerable<BilletModel>> GetAllBilletsAsync();
-        Task<BilletModel> GetBilletByIdAsync();
+        Task<BilletModel> GetBilletByIdAsync(long id);
         Task<BilletModel> CreateBilletAsync(BilletModel model);
         Task<bool> UpdateBilletAsync(BilletModel model, long id);
         Task<bool> DeleteBilletAsync(long id);
