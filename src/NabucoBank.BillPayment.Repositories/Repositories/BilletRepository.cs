@@ -32,22 +32,60 @@ namespace NabucoBank.BillPayment.Infrastructure.Repositories
 
         public Task<bool> DeleteBilletAsync(long id)
         {
-            throw new NotImplementedException();
+            _connection.Open();
+            try
+            {
+                string sql = "DELETE * FROM billets WHERE ID = @id";
+                return _connection.QueryFirstAsync<bool>(sql);
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
 
-        public Task<IEnumerable<BilletModel>> GetAllBilletsAsync()
+        public async Task<IEnumerable<BilletModel>> GetAllBilletsAsync()
         {
-            throw new NotImplementedException();
+            _connection.Open();
+            try
+            {
+                string sql = "SELECT * FROM billets WHERE IS_PAYED = 0;";
+                return await _connection.QueryAsync<BilletModel>(sql);
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
 
-        public Task<BilletModel> GetBilletByIdAsync(long id)
+        public async Task<BilletModel> GetBilletByIdAsync(long id)
         {
-            throw new NotImplementedException();
+            _connection.Open();
+            try
+            {
+                string sql = "SELECT * FROM billets WHERE ID = @id;";
+                return await _connection.QuerySingleAsync<BilletModel>(sql, new { id });
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
 
-        public Task<bool> UpdateBilletAsync(BilletModel model, long id)
+        public async Task<bool> UpdateBilletAsync(BilletModel model, long id)
         {
-            throw new NotImplementedException();
+            _connection.Open();
+            try
+            {
+                string sql = @"UPDATE billets (CPF, DIGITABLE_LINE, AMOUNT, DT_UPDATED, DT_DELETED, IS_PAYED) 
+                               VALUES (@Cpf, @DigitableLine, @Amount, @ExpiratedAt, @DeletedAt, @IsPayed);
+                               SELECT * FROM billets WHERE ID = LAST_INSERT_ID();";
+                return await _connection.QuerySingleAsync(sql, model);
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
     }
 }

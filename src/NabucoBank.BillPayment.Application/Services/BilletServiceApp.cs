@@ -23,7 +23,7 @@ namespace NabucoBank.BillPayment.Application.Services
         {
             var account = await _accountApi.GetAccountRequestAsync(payload.Cpf);
             
-            if (account == null)
+            if (account is null)
                 return null;
             
             var billet = _mapper.Map<BilletViewModel>(await _billetService.CreateBilletAsync(_mapper.Map<BilletModel>(payload)));

@@ -16,6 +16,7 @@ namespace NabucoBank.BillPayment.CrossCutting.Mapping
             Map(m => m.DeletedAt).ToColumn("DT_DELETED");
             Map(m => m.ExpiratedAt).ToColumn("DT_EXPIRATED");
             Map(m => m.HashCode).ToColumn("HASH_CODE");
+            Map(m => m.IsPayed).ToColumn("IS_PAYED");
         }
     }
 }

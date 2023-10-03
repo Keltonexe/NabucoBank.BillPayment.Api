@@ -1,5 +1,4 @@
-﻿using NabucoBank.BillPayment.Application.DTOs.Requests;
-using NabucoBank.BillPayment.Application.DTOs.Responses;
+﻿using NabucoBank.BillPayment.Application.DTOs.Responses;
 
 namespace NabucoBank.BillPayment.Application.Interfaces
 {

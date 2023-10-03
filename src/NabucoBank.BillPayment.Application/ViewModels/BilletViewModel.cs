@@ -9,6 +9,7 @@ namespace NabucoBank.BillPayment.Application.ViewModels
         public decimal Amount { get; set; }
         public DateTime ExpiratedAt { get; set; }
         public DateTime CreatedAt { get; set;}
+        public bool IsPayed { get; set; }
         public AccountResponseDto Account { get; set; }
     }
 }

@@ -6,5 +6,6 @@
         public string DigitableLine { get; set; }
         public decimal Amount { get; set; }
         public DateTime ExpiratedAt { get; set; }
+        public bool IsPayed {  get; set; }
     }
 }
